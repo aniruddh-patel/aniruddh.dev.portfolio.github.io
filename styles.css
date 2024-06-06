@@ -1,0 +1,269 @@
+:root {
+    --background-color: #eae9e9;
+    --text-color: #000;
+    --box-background: #ff9d00;
+    --box-text-color: #fff;
+    
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    height: 80vh;
+    width: 90vw;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding:20px;
+    border-radius: 10px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.main {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.main h1 {
+    font-size:3rem;
+    margin: 0;
+    color: black;
+}
+
+.main h2.typing {
+    font-size: 2rem;
+    /* color: #555; */
+    color: #ff9d00;
+    height: 20px;
+}
+
+.main p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.more-about {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--box-background);
+    color: var(--box-text-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+.more-about:hover{
+    margin-top:15px;
+}
+
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.box {
+    margin: 10px 0;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: width 0.3s, border-radius 0.3s;
+}
+
+.box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--box-background);
+    color: var(--box-text-color);
+    text-decoration: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: border-radius 0.3s, width 0.3s;
+}
+
+.box a i {
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    transition: right 0.3s;
+}
+
+.box a span {
+    position: absolute;
+    left: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, width 0.3s;
+    width: 0;
+    overflow: hidden;
+}
+
+.box:hover {
+    width: 150px;
+    border-radius: 25px;
+    
+}
+
+.box:hover a {
+    border-radius: 25px;
+    width: 100%;
+}
+
+.box:hover a i {
+    right: 15px;
+    /* Keep icon in place */
+}
+
+.box:hover a span {
+    width: calc(100% - 50px);
+    /* Adjust width to fill the rest of the button */
+    opacity: 1;
+}
+
+body.dark-mode {
+    --background-color: #2e2e2e;
+    --text-color: #ffffff;
+    --box-background: #555;
+    --box-text-color: #fff;
+}
+
+#theme-switcher {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    filter: invert(100%);
+    color: var(--box-text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#theme-switcher:hover {
+    background: var(--box-background-hover);
+}
+
+
+
+
+/* Ensure your existing CSS code is correct */
+
+/* Add these styles for mobile menu */
+
+
+
+#mobile-menu.hidden {
+    width: 0;
+}
+
+/* Add these styles for mobile menu */
+
+
+
+
+#mobile-menu.hidden {
+    width: 0;
+}
+
+/* Add these styles for mobile menu */
+#hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    filter: invert(100%);
+    right: 10px;
+    padding: 5px;
+    /* background: var(--box-background); */
+    color: var(--box-text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+
+#mobile-menu.hidden {
+    width: 0;
+}
+
+
+
+#mobile-menu.visible {
+    width: 250px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        
+    }
+    
+.profile img {
+    margin-top: 50px;
+    width: 150px;
+}
+    
+}
+
+
+#mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    /* Adjust width as needed */
+    background: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: width 0.3s;
+    z-index: 1;
+}
+
+#mobile-menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    display: block;
+}
