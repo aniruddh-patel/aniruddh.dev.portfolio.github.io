@@ -196,12 +196,6 @@ color: white;
 
 
 
-
-
-
-/* Ensure your existing CSS code is correct */
-
-/* Add these styles for mobile menu */
 #hamburger-menu {
     display: none;
     position: fixed;

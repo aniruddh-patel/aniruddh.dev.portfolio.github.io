@@ -40,7 +40,7 @@
 }
 
 .myinfo {
-    height: 380px;
+    height: auto;
     width:450px;
     background-color: #ffffff22;
     padding: 20px;
